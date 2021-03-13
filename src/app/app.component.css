@@ -1,0 +1,130 @@
+section{
+    background-color: white;
+   
+}
+.hero{
+    background-color: #1c1d25; /* dark blue*/
+    height: 100vh;
+    color: white;
+    font-size: 40px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    list-style-type: none; /* to avoid . About me .Project .Contacts i.e remove dots*/
+    width: 500px;
+    justify-content: space-around; /*properly space aroud the li in ul*/
+    font-size: 30px;
+
+}
+li{
+    /* width: 200px; */
+    text-decoration: none;
+}
+
+.hero-area{
+    display: flex;/* making it flexible to any device window*/
+    /*flex-direction: column;     it will be flexible in column , it not specified it will be flexible to row as we have
+    specified justify-content: center;*/
+    height: 100%; /* it will take height of its parent i.e section*/
+    /*justify-content: center; for putiing it in centre of the section*/
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-text{
+    margin-left: 80px;
+    margin-bottom: 200px;
+}
+.button{
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: coral;
+    font-weight: 300;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+.button:hover{
+    background-color: #ef744b;
+}
+.button:active{
+    background-color: #a9a9a9;
+    color: #808080;
+}
+.socials{
+    padding-bottom: 200px; /*as we have given margin-bottom: 200px; to hero-text*/
+}
+.social{
+    margin: 20px;
+}
+.logo{
+    height: 80px;
+    margin: 30px;
+}
+
+.sub-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+.sub-section-alternative{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+}
+.headshot{
+    width: 300px;
+    border-radius: 150px;
+}
+.headshot-container{
+    display: flex;
+    align-items: center;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card{
+    width: 300px;
+    height: 500px;
+    box-shadow: 5px 5px 20px rgb(194, 191, 191);
+    margin: 10px;
+}
+
+
+
+
+.project-image{
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    margin-top: 25px;
+}
+hr{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.project-link{
+    text-decoration: none;
+    color: #ef744b;
+}
+@media only screen and(max-width: 1000px){
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

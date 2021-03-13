@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+h1{
+    font-size: 90px;
+    margin: 0;
+}
+h2{
+    font-size: 50px;
+}
+p{
+    margin: 0;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.subtext{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.project-container{
+    display: flex;
+    justify-content: space-around;
+}
+@media only screen and(max-width: 1000px){
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
