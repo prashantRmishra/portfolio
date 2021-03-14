@@ -26,6 +26,7 @@ ul{
     font-size: 30px;
 
 }
+
 li{
     /* width: 200px; */
     text-decoration: none;
@@ -92,7 +93,12 @@ li{
     display: flex;
     align-items: center;
 }
-
+.information p a{
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    
+}
 .project-container{
     display: flex;
     justify-content: space-around;
@@ -122,7 +128,43 @@ hr{
     text-decoration: none;
     color: #ef744b;
 }
-@media only screen and(max-width: 1000px){
+.hamburger{
+    display: none;
+}
+.hamburger:focus{
+    outline: 0;
+}
+@media only screen and (max-width: 1000px){
+    .hamburger{
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        margin: 20px;
+        align-self: flex-end;
+    }
+    ul{
+        display: none;
+        margin: 0px;
+        background-color: #2c2e3b;
+    }
+    ul.show{
+        display: block;
+    }
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #2c2e3b;
+
+    }
+    .logo{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
     .project-container{
         display: flex;
         flex-wrap: wrap;
