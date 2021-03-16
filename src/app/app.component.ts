@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,17 @@ constructor(){
   }
   hamClicked(){
     this.toggleButton();
+  }
+
+  dispalyContactForm(){
+    //document.getElementById('contactButton').style.display='none';
+    document.getElementById('model').style.display='block';
+  }
+  closeContact(){
+    document.getElementById('model').style.display='none';
+  }
+  submitClicked(){
+    document.getElementById('model').style.display='none';
   }
 
 }

@@ -1,51 +1,91 @@
-section{
+section {
     background-color: white;
-   
 }
-.hero{
-    background-color: #1c1d25; /* dark blue*/
+
+.hero {
+    background-color: #1c1d25;
+    /* dark blue*/
     height: 100vh;
     color: white;
     font-size: 40px;
 }
-footer{
+
+footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 80px;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
 }
-ul{
-    display: flex;
-    list-style-type: none; /* to avoid . About me .Project .Contacts i.e remove dots*/
-    width: 500px;
-    justify-content: space-around; /*properly space aroud the li in ul*/
-    font-size: 30px;
 
+ul {
+    display: flex;
+    list-style-type: none;
+    /* to avoid . About me .Project .Contacts i.e remove dots*/
+    width: 500px;
+    justify-content: space-around;
+    /*properly space aroud the li in ul*/
+    font-size: 30px;
 }
 
-li{
+li {
     /* width: 200px; */
     text-decoration: none;
 }
 
-.hero-area{
-    display: flex;/* making it flexible to any device window*/
+
+/* navigations underline animation effect */
+
+a.navigations {
+    position: relative;
+}
+
+a.navigations:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ef744b;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a.navigations:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+h1 span:hover {
+    color: #ef744b;
+}
+
+
+/*----------------------- Animation finish ------------- */
+
+.hero-area {
+    display: flex;
+    /* making it flexible to any device window*/
     /*flex-direction: column;     it will be flexible in column , it not specified it will be flexible to row as we have
     specified justify-content: center;*/
-    height: 100%; /* it will take height of its parent i.e section*/
+    height: 100%;
+    /* it will take height of its parent i.e section*/
     /*justify-content: center; for putiing it in centre of the section*/
     justify-content: space-between;
     align-items: center;
 }
-.hero-text{
+
+.hero-text {
     margin-left: 80px;
     margin-bottom: 200px;
 }
-.button{
+
+.button {
     width: 200px;
     height: 55px;
     border-radius: 30px;
@@ -56,86 +96,131 @@ li{
     padding-top: 5px;
     margin-top: 20px;
 }
-.button:hover{
+
+.button:hover {
     background-color: #ef744b;
 }
-.button:active{
+
+.button:active {
     background-color: #a9a9a9;
     color: #808080;
 }
-.socials{
-    padding-bottom: 200px; /*as we have given margin-bottom: 200px; to hero-text*/
+
+.socials {
+    padding-bottom: 200px;
+    /*as we have given margin-bottom: 200px; to hero-text*/
 }
-.social{
+
+.social {
     margin: 20px;
 }
-.logo{
+
+.social svg:hover {
+    fill: #ef744b;
+}
+
+.logo {
     height: 80px;
     margin: 30px;
 }
 
-.sub-section{
+
+/* logo animation */
+
+
+/* .logo {
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.logo:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+} */
+
+
+/* logo animation finish */
+
+.sub-section {
     display: flex;
     justify-content: space-around;
     padding: 80px;
 }
-.sub-section-alternative{
+
+.sub-section-alternative {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 80px;
 }
-.headshot{
-    width: 300px;
-    border-radius: 150px;
+
+.headshot {
+    width: 350px;
+    height: 350px;
+    border-radius: 175px;
+    box-shadow: 5px 5px 20px rgb(194, 191, 191);
 }
-.headshot-container{
+
+.headshot-container {
     display: flex;
     align-items: center;
 }
-.information p a{
+
+.information p a {
     font-size: 20px;
     font-weight: 300;
     color: black;
-    
 }
-.project-container{
+
+.information p a:hover {
+    color: #ef744b;
+}
+
+.project-container {
     display: flex;
     justify-content: space-around;
 }
 
-.project-card{
+.project-card {
     width: 300px;
     height: 500px;
     box-shadow: 5px 5px 20px rgb(194, 191, 191);
     margin: 10px;
 }
 
-
-
-
-.project-image{
+.project-image {
     width: 250px;
     height: 250px;
     border-radius: 125px;
     margin-top: 25px;
+
 }
-hr{
+
+hr {
     margin-left: 20px;
     margin-right: 20px;
 }
-.project-link{
+
+.project-link {
     text-decoration: none;
+    color: black;
+}
+
+.project-link:hover {
     color: #ef744b;
 }
-.hamburger{
+
+.hamburger {
     display: none;
 }
-.hamburger:focus{
+
+.hamburger:focus {
     outline: 0;
 }
-@media only screen and (max-width: 1000px){
-    .hamburger{
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
         display: block;
         border: 0;
         background-color: transparent;
@@ -144,29 +229,151 @@ hr{
         margin: 20px;
         align-self: flex-end;
     }
-    ul{
+    ul {
         display: none;
         margin: 0px;
         background-color: #2c2e3b;
     }
-    ul.show{
+    ul.show {
         display: block;
     }
-    nav{
+    nav {
         display: flex;
         flex-direction: column-reverse;
         background-color: #2c2e3b;
-
     }
-    .logo{
+    .logo {
         display: none;
     }
-
 }
 
-@media only screen and (max-width: 1000px){
-    .project-container{
+
+@media only screen and (max-width: 1000px) {
+    .project-container {
         display: flex;
         flex-wrap: wrap;
     }
 }
+
+
+/* contact div start */
+#contacts>h2>span:hover{
+    cursor: pointer;
+    color: #ef744b;
+}
+/* contact div finish */
+
+/* model popup css */
+.model{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.4);
+    border-radius: 10px;
+}
+.model-content{
+    border: solid 1px black;
+    position: relative;
+    padding: 0;
+    margin: auto;
+    width: 80%;
+    box-shadow: 5px 5px 20px rgb(194, 191, 191);
+    background-color: #fefefe;
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    /* 
+    flex-direction: column; */
+    animation: animationtop;
+    animation-duration: 0.4s;
+
+}
+/* adding animations */
+@keyframes animationtop{
+from {top: -300px;opacity: 0;}
+to{top:0;opacity: 1;}
+}
+.model-header{
+    background-color:coral;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 2px 16px;
+    color: white;
+    
+}
+.model-header  span{
+    font-size: 40px;
+} 
+.model-body{
+    padding: 2px 16px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.model input,textarea{
+    margin: 10px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+/* @media only screen and (max-width:1000px){
+    .model-body{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+} */
+.model-footer{
+    background-color: coral;
+    padding: 2px 16px;
+    color: white;
+    text-align: center;
+}
+.model-footer > a>svg:hover{
+    fill: black;
+}
+.close-model:hover{
+    color: #2c2e3b;
+    cursor: pointer;
+}
+.close-model{
+    float: right;
+}
+
+input[type=text]:focus{
+    border-bottom: solid 1px #ef744b;
+}
+textarea:focus{
+    border-bottom: solid 1px #ef744b;
+}
+.submitButton{
+    width: 100px;
+    height: 30px;
+    border-radius: 75px;
+    background-color:coral;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 5px;
+    margin: 10px;
+    color: white;
+  
+}
+.submitButton:hover{
+    background-color: #ef744b;
+    cursor: pointer;
+}
+.submitButton:active{
+    background-color:#a9a9a9;
+    color: #808080;
+    cursor: pointer;
+}
+/* model popup finish */
